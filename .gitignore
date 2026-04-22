@@ -32,6 +32,7 @@ venv.bak/
 scratch/
 .gemini/
 antigravity/
+references/
 
 # Large Data (Optional, but recommended for large datasets)
 # data/raw/*.csv
