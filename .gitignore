@@ -1,8 +1,4 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
+\reports/ppt_stage_content.md
 # OS generated files
 .DS_Store
 .DS_Store?
