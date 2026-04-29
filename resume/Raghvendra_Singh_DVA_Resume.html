@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raghvendra Singh – Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #1a56db;
+      --accent-light: #e8f0fe;
+      --text-dark: #1a1a2e;
+      --text-mid: #374151;
+      --text-soft: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5pt;
+      color: var(--text-mid);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+
+    /* ───── PAGE / LAYOUT ───── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 14mm 16mm 12mm 16mm;
+      background: #fff;
+    }
+
+    @media print {
+      body { background: none; }
+      .page { margin: 0; padding: 12mm 14mm 10mm 14mm; box-shadow: none; }
+      @page { size: A4; margin: 0; }
+    }
+
+    /* ───── HEADER ───── */
+    .header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding-bottom: 10px;
+      border-bottom: 2.5px solid var(--accent);
+      margin-bottom: 11px;
+    }
+    .header-text h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      color: var(--text-dark);
+      letter-spacing: -0.3px;
+    }
+    .header-text .role {
+      font-size: 10.5pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 2px;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin-top: 6px;
+      font-size: 8.4pt;
+      color: var(--text-soft);
+    }
+    .contact-row span { display: flex; align-items: center; gap: 4px; }
+    .contact-row a { color: var(--text-soft); text-decoration: none; }
+    .contact-row a:hover { color: var(--accent); }
+
+    /* ───── SECTIONS ───── */
+    section { margin-bottom: 11px; }
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+
+    /* ───── SUMMARY ───── */
+    .summary p { font-size: 9pt; color: var(--text-mid); line-height: 1.5; }
+
+    /* ───── SKILLS ───── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px 10px;
+    }
+    .skill-group strong { font-size: 8.4pt; color: var(--text-dark); display: block; margin-bottom: 2px; }
+    .skill-group span { font-size: 8.2pt; color: var(--text-mid); }
+
+    /* ───── EXPERIENCE / PROJECT ───── */
+    .entry { margin-bottom: 9px; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6px;
+    }
+    .entry-header .title {
+      font-weight: 600;
+      font-size: 9.5pt;
+      color: var(--text-dark);
+    }
+    .entry-header .date {
+      font-size: 8pt;
+      color: var(--text-soft);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .entry-sub {
+      font-size: 8.6pt;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .entry ul {
+      padding-left: 14px;
+      list-style: disc;
+    }
+    .entry ul li {
+      font-size: 8.8pt;
+      color: var(--text-mid);
+      margin-bottom: 2px;
+      line-height: 1.45;
+    }
+
+    /* ───── EDUCATION ───── */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-row .edu-left .inst {
+      font-weight: 600;
+      font-size: 9.5pt;
+      color: var(--text-dark);
+    }
+    .edu-row .edu-left .degree {
+      font-size: 8.6pt;
+      color: var(--text-soft);
+      margin-top: 1px;
+    }
+    .edu-row .edu-right {
+      text-align: right;
+      font-size: 8pt;
+      color: var(--text-soft);
+    }
+
+    /* ───── HIGHLIGHT PILLS ───── */
+    .pill-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+    .pill {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 7.8pt;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #c3d8fb;
+    }
+
+    /* ───── ACHIEVEMENTS ───── */
+    .ach-list { list-style: none; padding: 0; }
+    .ach-list li { font-size: 8.8pt; color: var(--text-mid); margin-bottom: 3px; padding-left: 14px; position: relative; }
+    .ach-list li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); }
+
+    /* ───── TWO-COL LAYOUT ───── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header class="header">
+    <div class="header-text">
+      <h1>Raghvendra Singh</h1>
+      <div class="role">AI / ML Engineer &amp; Data Analytics</div>
+      <div class="contact-row">
+        <span>📍 Ajmer, Rajasthan, India</span>
+        <span>📞 <a href="tel:+917300026329">+91 73000 26329</a></span>
+        <span>✉️ <a href="mailto:23raghvendra@example.com">23raghvendra@gmail.com</a></span>
+        <span>🔗 <a href="https://github.com/23raghvendra" target="_blank">github.com/23raghvendra</a></span>
+        <span>💼 <a href="https://www.linkedin.com/in/raghvendra-singh" target="_blank">linkedin.com/in/raghvendra-singh</a></span>
+        <span>🌐 <a href="https://dva-portfolio-eosin.vercel.app/" target="_blank">dva-portfolio-eosin.vercel.app</a></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ SUMMARY ══ -->
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Final-year B.Tech student specialising in AI/ML &amp; Data Science with hands-on experience in end-to-end data
+      analytics pipelines, full-stack web development, and machine learning model deployment. Contributed to the
+      <strong>SteamVision</strong> group project — a 66,000-record Steam games analytics study — and independently
+      built production web applications (FinSet, SCMS). Passionate about translating raw data into business insight.
+    </p>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <strong>Languages</strong>
+        <span>Python, JavaScript, SQL, HTML/CSS</span>
+      </div>
+      <div class="skill-group">
+        <strong>Data &amp; ML</strong>
+        <span>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</span>
+      </div>
+      <div class="skill-group">
+        <strong>Databases</strong>
+        <span>MongoDB, MySQL, PostgreSQL</span>
+      </div>
+      <div class="skill-group">
+        <strong>Web Development</strong>
+        <span>React, Node.js, Express, Next.js, Vite</span>
+      </div>
+      <div class="skill-group">
+        <strong>Visualisation</strong>
+        <span>Tableau, Plotly, Power BI</span>
+      </div>
+      <div class="skill-group">
+        <strong>DevOps &amp; Tools</strong>
+        <span>Git, GitHub, Vercel, JWT Auth, REST APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section>
+    <div class="section-title">Projects</div>
+
+    <!-- SteamVision -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="title">SteamVision – Steam Games Success Analytics</span>
+        <span class="date">Jan 2026 – Apr 2026</span>
+      </div>
+      <div class="entry-sub">Group Project · DVA Course · B.Tech · GitHub Repo &amp; Tableau Dashboard</div>
+      <ul>
+        <li>Conducted end-to-end data analytics on <strong>66,427 Steam game records</strong> (2006–2023) to identify the factors driving commercial success.</li>
+        <li>Defined a custom <strong>Commercial Success Index (CSI)</strong>: success_score = 0.4 × normalised peak players + 0.6 × normalised total reviews.</li>
+        <li>Performed correlation analysis revealing <strong>R² = 0.74</strong> between review volume and peak player engagement — demonstrating visibility matters more than rating.</li>
+        <li>Segmented 66k games into Elite (7,997), Hidden Gems (8,599), Risk Titles (8,646), and Mid-Tier (40,816) categories for portfolio decision support.</li>
+        <li>Validated that RPG games significantly outperform Casual genre in median peak players (p &lt; 0.001) via hypothesis testing.</li>
+        <li>Contributed to the final <strong>PowerPoint presentation</strong> summarising findings for stakeholder communication.</li>
+      </ul>
+      <div class="pill-row">
+        <span class="pill">Python</span><span class="pill">Pandas</span><span class="pill">Seaborn</span>
+        <span class="pill">Tableau</span><span class="pill">Regression Analysis</span>
+        <span class="pill">Hypothesis Testing</span><span class="pill">Data Cleaning</span>
+      </div>
+    </div>
+
+    <!-- FinSet -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="title">FinSet – Personal Finance Manager</span>
+        <span class="date">Nov 2025 – Jan 2026</span>
+      </div>
+      <div class="entry-sub">Full-Stack · React + Node.js + MongoDB · Deployed on Vercel</div>
+      <ul>
+        <li>Built a full-stack personal finance web app with authentication, expense tracking, and visual analytics dashboards.</li>
+        <li>Implemented JWT-based authentication and bcrypt password hashing for secure user management.</li>
+        <li>Deployed frontend on <strong>Vercel</strong> and backend with MongoDB Atlas; handled serverless cold-start connection optimisation.</li>
+      </ul>
+      <div class="pill-row">
+        <span class="pill">React</span><span class="pill">Node.js</span><span class="pill">MongoDB</span>
+        <span class="pill">JWT Auth</span><span class="pill">Vercel</span><span class="pill">REST API</span>
+      </div>
+    </div>
+
+    <!-- SCMS -->
+    <div class="entry">
+      <div class="entry-header">
+        <span class="title">SCMS – Student Course Management System</span>
+        <span class="date">Sep 2025 – Dec 2025</span>
+      </div>
+      <div class="entry-sub">Backend · Node.js + Express + MongoDB · Secure Auth</div>
+      <ul>
+        <li>Designed modular backend architecture with role-based access control, JWT token issuance, and bcrypt password hashing.</li>
+        <li>Implemented full CRUD for course, enrollment, and user management via RESTful API endpoints.</li>
+      </ul>
+      <div class="pill-row">
+        <span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">bcrypt</span>
+        <span class="pill">JWT</span><span class="pill">MongoDB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-row">
+      <div class="edu-left">
+        <div class="inst">B.Tech — Computer Science &amp; Engineering (AI/ML)</div>
+        <div class="degree">Rajasthan Technical University, Ajmer, Rajasthan</div>
+      </div>
+      <div class="edu-right">
+        2022 – 2026<br/>
+        <span style="color:var(--accent);font-weight:600;">Final Year</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ACHIEVEMENTS / CERTIFICATIONS ══ -->
+  <section>
+    <div class="section-title">Achievements &amp; Certifications</div>
+    <div class="two-col">
+      <ul class="ach-list">
+        <li>Deployed two production-grade full-stack web applications.</li>
+        <li>SteamVision project: Analysed 66k+ records end-to-end as part of team.</li>
+        <li>Implemented secure bcrypt password hashing &amp; JWT auth from scratch.</li>
+      </ul>
+      <ul class="ach-list">
+        <li>Active open-source contributor — GitHub: <strong>23raghvendra</strong></li>
+        <li>Self-taught React, Node.js &amp; data analytics alongside B.Tech curriculum.</li>
+        <li>DVA Portfolio: <a href="https://dva-portfolio-eosin.vercel.app/" style="color:var(--accent);">dva-portfolio-eosin.vercel.app</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ LINKS ══ -->
+  <section>
+    <div class="section-title">Links</div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:8.4pt;color:var(--text-soft);">
+      <span>🌐 Portfolio: <a href="https://dva-portfolio-eosin.vercel.app/" style="color:var(--accent);">dva-portfolio-eosin.vercel.app</a></span>
+      <span>💻 GitHub: <a href="https://github.com/23raghvendra" style="color:var(--accent);">github.com/23raghvendra</a></span>
+      <span>📊 SteamVision Repo: <a href="https://github.com/GuruManoharGuptaBaratam/E_G10_SteamVision" style="color:var(--accent);">E_G10_SteamVision</a></span>
+      <span>📈 Tableau: <a href="https://public.tableau.com/app/profile/guru.manohar.gupta/viz/SteamVisionAnalysis/Dashboard3" style="color:var(--accent);">SteamVision Dashboard</a></span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
