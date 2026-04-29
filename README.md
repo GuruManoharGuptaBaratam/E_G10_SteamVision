@@ -122,7 +122,7 @@ Interactive dashboard to explore:
 - Relationship between reviews and success
 - Success segmentation
 
- **Tableau Public Link:** *(Add here)*  
+ **Tableau Public Link:** *(https://public.tableau.com/app/profile/guru.manohar.gupta/viz/SteamVisionAnalysis/Dashboard3)*  
 
 ---
 
