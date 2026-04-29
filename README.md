@@ -183,7 +183,7 @@ Interactive dashboard to explore:
   https://github.com/GuruManoharGuptaBaratam/E_G10_SteamVision  
 
 -  Tableau Dashboard  
-  *(Add link)*  
+  https://public.tableau.com/app/profile/guru.manohar.gupta/viz/SteamVisionAnalysis/Dashboard3 
 
 ---
 
